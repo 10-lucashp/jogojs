@@ -1,0 +1,66 @@
+<!DOCTYPE html> <html lang="pt-br"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Jogo</title> <link rel="stylesheet" href="../CSS/style.css"> </head> <body> <div class="topo"> <h2>Jogador: <span id="usuario"></span></h2> <p>Jogadas: <span id="jogadas">0</span></p> <p>Tempo: <span id="timer">00:00</span></p> <button onclick="reiniciar()">RECOMEÇAR</button> </div> <div class="game-board" id="gameBoard"></div> <audio id="somEntrada" preload="auto"> <source src="../AUDIOS/mariosomlets.mp3" type="audio/mpeg"> </audio> <script> function tocarAudio() { const audio = document.getElementById('somEntrada'); audio.play().catch(error => {}); } window.addEventListener('load', tocarAudio); document.addEventListener('click', tocarAudio, { once: true }); document.addEventListener('touchstart', tocarAudio, { once: true }); document.addEventListener('keydown', tocarAudio, { once: true }); </script> <script src="../JavaScript/script.js"></script> </body> </html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jogo</title>
+<link rel="stylesheet" href="/JOGO-IW-main/ProjetoJogoMemo
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+
+    <link rel="stylesheet" href="/JOGO-IW-main/ProjetoJogoMemoria/CSS/style.css">
+</head>
+
+<body>
+    <div class="game-board" id="gameBoard"></div>
+
+    <!-- ÁUDIO DE ENTRADA -->
+    <audio id="somEntrada" preload="auto">
+        <source src="../AUDIOS/mariosomlets.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ÁUDIO DOS 3 MINUTOS -->
+    <audio id="somTempo" preload="auto">
+        <source src="../AUDIOS/risadakiko.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ÁUDIO DE ACERTO -->
+    <audio id="somAcerto" preload="auto"></audio>
+
+    <!-- ÁUDIO DE VITÓRIA -->
+    <audio id="somVitoria" preload="auto">
+        <source src="../AUDIOS/ronaldin.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+
+        function tocarAudio() {
+
+            const audio = document.getElementById('somEntrada');
+
+            audio.play().catch(error => {
+                console.log("Aguardando interação...");
+            });
+        }
+
+        window.addEventListener('load', tocarAudio);
+
+        document.addEventListener('click', tocarAudio, { once: true });
+
+        document.addEventListener('touchstart', tocarAudio, { once: true });
+
+        document.addEventListener('keydown', tocarAudio, { once: true });
+
+    </script>
+
+    <script src="../JavaScript/script.js"></script>
+
+</body>
+
+</html>
