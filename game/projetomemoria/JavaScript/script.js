@@ -62,8 +62,8 @@ const cronometro = setInterval(() => {
     document.getElementById('timer').textContent =
     `${min}:${seg}`;
 
-    // EVENTO DOS 3 MINUTOS
-    if (segundos >= 180 && !audioTocado) {
+    // RISADA COM 1 MINUTO
+    if (segundos >= 60 && !audioTocado) {
 
         audioTocado = true;
 
@@ -241,7 +241,6 @@ function verificarVitoria() {
 
         seg = String(seg).padStart(2, '0');
 
-        // ALERTA APÓS O ÁUDIO COMEÇAR
         setTimeout(() => {
 
             alert(
