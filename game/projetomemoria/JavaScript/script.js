@@ -77,7 +77,7 @@ const cronometro = setInterval(() => {
 
         const mensagem = document.createElement('div');
 
-        mensagem.innerText = 'lento demais betinha 🤣🫵🫵';
+        mensagem.innerText = 'lento demais 🤣🫵🫵';
 
         mensagem.style.position = 'fixed';
 
